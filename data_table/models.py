@@ -1,0 +1,33 @@
+from django.db import models
+
+class DataTable(models.Model):
+    ReviewRow_id = models.PositiveIntegerField(primary_key=True)
+    Sentiment = models.CharField(max_length=200)
+    L1_Cluster_ID = models.CharField(max_length=200)
+    L1_Cluster = models.CharField(max_length=200)
+    L1_PhraseCount = models.IntegerField()
+    L1_ReviewCount = models.IntegerField()
+    L1_RatingPhrase = models.FloatField()
+    L1_RatingReview = models.FloatField()
+    L2_Cluster_ID = models.CharField(max_length=200)
+    L2_Cluster = models.CharField(max_length=200)
+    L2_PhraseCount = models.IntegerField()
+    L2_ReviewCount = models.IntegerField()
+    L2_RatingPhrase = models.FloatField()
+    L2_RatingReview = models.FloatField()
+    L3_Cluster_ID = models.CharField(max_length=200)
+    L3_Cluster = models.CharField(max_length=200)
+    L3_ClusterPhrase = models.CharField(max_length=2000)
+    L3_PhraseCount = models.IntegerField()
+    L3_ReviewCount = models.IntegerField()
+    L3_RatingPhrase = models.FloatField()
+    L3_RatingReview = models.FloatField()
+    L4_ID = models.CharField(max_length=200)
+    L4_Phrase = models.CharField(max_length=2000)
+    review_id = models.CharField(max_length=200)
+    reviewRating = models.FloatField()
+    review = models.CharField(max_length=2000)
+    reviewDate = models.CharField(max_length=200)
+    flag = models.CharField(max_length=200)
+    def __str__(self):
+        return self.ReviewRow_id
